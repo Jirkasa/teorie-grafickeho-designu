@@ -1,0 +1,24 @@
+{
+  "name": "teorie-grafickeho-designu",
+  "version": "1.0.0",
+  "description": "Website about graphic design theory.",
+  "main": "index.js",
+  "scripts": {
+    "compile:less": "lessc ./less/main.less ./assets/css/style.css",
+    "nodemon:compile:less": "nodemon -e less -x \"npm run compile:less\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jirkasa/teorie-grafickeho-designu.git"
+  },
+  "author": "Jiří Satora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jirkasa/teorie-grafickeho-designu/issues"
+  },
+  "homepage": "https://github.com/Jirkasa/teorie-grafickeho-designu#readme",
+  "devDependencies": {
+    "less": "^4.1.2",
+    "nodemon": "^2.0.15"
+  }
+}
