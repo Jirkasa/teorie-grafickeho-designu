@@ -120,6 +120,7 @@ body {
   color: #2f2d28;
 }
 .fluid-image {
+  display: block;
   max-width: 100%;
 }
 .fluid-image--full-width {
@@ -427,11 +428,14 @@ body {
   flex: 0 0 22.7rem;
   background-color: #ebe9e7;
 }
+.article__side-bar--right {
+  flex: 0 0 28rem;
+}
 .article__content {
   flex: 2;
   padding: 1.6rem;
 }
 .article__content main {
-  max-width: 95.4rem;
+  max-width: 98.6rem;
   margin: 0 auto;
 }
