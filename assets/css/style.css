@@ -120,10 +120,18 @@ body {
   padding: 1.6rem 2.4rem;
 }
 .header__title {
-  font-family: 'Domine', serif;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 4rem;
   color: #2f2d28;
+}
+.footer {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #fff;
+  background-color: #726f68;
+  text-align: center;
+  padding: 0.8rem;
 }
 .fluid-image {
   display: block;
@@ -426,6 +434,30 @@ body {
   top: -0.8rem;
   left: 0.8rem;
   border-bottom-left-radius: 0.4rem;
+}
+.header-navigation ul {
+  list-style: none;
+  display: flex;
+}
+.header-navigation li:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.header-navigation__item:link,
+.header-navigation__item:visited {
+  font-size: 2rem;
+  line-height: 2rem;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  color: #2f2d28;
+  text-transform: uppercase;
+  transition: all 0.1s;
+  padding: 0.8rem;
+}
+.header-navigation__item:hover,
+.header-navigation__item--active:link,
+.header-navigation__item--active:visited {
+  background-color: #2f2d28;
+  color: #fff;
 }
 .article {
   display: flex;
