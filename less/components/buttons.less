@@ -19,6 +19,18 @@
         transition: all .1s;
     }
 
+    &--lowercase {
+        &:link, &:visited {
+            text-transform: unset;
+        }
+    }
+
+    &--light {
+        &:link, &:visited {
+            color: @colors[text-white];
+        }
+    }
+
     &:hover {
         background-color: darken(@colors[primary], 5%);
     }
