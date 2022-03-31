@@ -20,10 +20,16 @@
                         <li><a href="../barvy/" class="header-navigation__item header-navigation__item--active">Tutoriál</a></li>
                     </ul>
                 </nav>
+                <a href="../" class="home-button">Úvod
+                    <svg>
+                        <use xlink:href="../assets/img/icon-sprite.svg#icon-home"></use>
+                    </svg>
+                </a>
             </div>
         </header>
         <div class="article">
-            <div class="article__side-bar">
+            <div class="article__side-bar article__side-bar--left">
+                <input type="checkbox" id="chapter-navigation" class="navigation-toggle-checkbox">
                 <nav class="navigation">
                     <ul>
                         <li>
@@ -67,6 +73,11 @@
                             </a>
                         </li>
                     </ul>
+                    <label for="chapter-navigation" class="navigation-toggle-button">
+                        <svg>
+                            <use xlink:href="../assets/img/icon-sprite.svg#icon-circle-down"></use>
+                        </svg>
+                    </label>
                 </nav>
             </div>
             <div class="article__content">
@@ -306,7 +317,13 @@
                 </main>
             </div>
             <div class="article__side-bar article__side-bar--right">
+                <input type="checkbox" id="page-navigation" class="page-navigation-toggle-checkbox">
                 <nav class="page-navigation">
+                    <label for="page-navigation" class="page-navigation-toggle-button">
+                        <svg>
+                            <use xlink:href="../assets/img/icon-sprite.svg#icon-circle-right"></use>
+                        </svg>
+                    </label>
                     <ul id="page-nav">
                         <li>
                             <a href="#barvy" class="page-navigation__item">Barvy</a>

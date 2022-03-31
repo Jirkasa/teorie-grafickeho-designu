@@ -1,0 +1,7 @@
+#pxToEm(@pixels) {
+    @result: unit((@pixels / 16), em);
+}
+
+#toInitRem(@rem, @currentRem) {
+    @result: unit((@rem * 10 / @currentRem), rem);
+}

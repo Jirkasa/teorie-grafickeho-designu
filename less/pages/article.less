@@ -1,19 +1,39 @@
 .article {
     display: flex;
+    flex-wrap: wrap;
 
     &__side-bar {
         flex: 0 0 22.7rem;
 
         background-color: @colors[bg-grey-20];
 
+        &--left {
+            @media (max-width: @chapter-navigation-breakpoint) {
+                flex: 0 0 0;
+                width: 0;
+            }
+        }
+
         &--right {
             flex: 0 0 28rem;
+
+            @media (max-width: @chapter-navigation-breakpoint) {
+                padding-top: 3.2rem;
+            }
+            @media (max-width: @page-navigation-breakpoint) {
+                flex: 0 0 0;
+                width: 0;
+            }
         }
     }
 
     &__content {
         flex: 2;
         padding: 1.6rem;
+
+        @media (max-width: @chapter-navigation-breakpoint) {
+            padding-top: 3.2rem + 1.6rem;
+        }
 
         main {
             // max-width: 95.4rem;

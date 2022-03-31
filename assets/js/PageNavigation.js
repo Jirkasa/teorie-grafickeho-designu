@@ -1,4 +1,4 @@
-import { addPipes, getSortedHeadingTree, scrollParentToChild } from "./pageNavigationHelpers.js";
+import { addPipes, resizePipes, getSortedHeadingTree, scrollParentToChild } from "./pageNavigationHelpers.js";
 
 // determines offset from top part of viewport
 const HIGHLIGHT_OFFSET = 80;
@@ -56,6 +56,12 @@ const handleScroll = function() {
     }
 }
 
+// called on window resize
+const handleResize = function() {
+    resizePipes(pageNav);
+    // resizePipes(document.querySelector(".page-navigation"));
+}
+
 
 // SETUP CODE
 addPipes(pageNav);
@@ -66,5 +72,4 @@ pageNav.addEventListener("click", () => {
     canScrollIntoView = false;
     setTimeout(() => canScrollIntoView = true, 1000);
 });
-
-// todo - potom ještě při změně velikosti okna resiznout ty pipes
+window.addEventListener("resize", handleResize);

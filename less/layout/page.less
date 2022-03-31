@@ -1,3 +1,9 @@
 .page {
     background-color: @colors[bg-white];
+    margin: 0 auto;
+
+    @media (min-width: #pxToEm(1650)[]) {
+        margin: 1.6rem auto;
+        max-width: @max-page-width;
+    }
 }

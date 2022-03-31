@@ -42,6 +42,24 @@ export const addPipes = function(ul, firstItemVisited = false) {
     }
 }
 
+// resizes pipes in page navigation
+export const resizePipes = function(ul) {
+    // iterate over all children of element
+    for (let child of ul.children) {
+        if (child.tagName === "UL") {
+            // get last child (li)
+            const lastChild = child.children.length === 1 ? child.firstElementChild : child.children[child.children.length-2];
+            // get child (a) of last child (li)
+            const itemEl = lastChild.firstElementChild;
+            // get pipe and change height
+            let pipe = child.lastElementChild;
+            pipe.style.height = `calc(100% - ${lastChild.clientHeight-itemEl.clientHeight/2}px + .8rem)`;
+        }
+        // call recursively resizePipes function for child
+        resizePipes(child);
+    }
+}
+
 // represents node in heading tree
 class Node {
     constructor(element) {
