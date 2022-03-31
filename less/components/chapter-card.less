@@ -2,6 +2,13 @@
     flex: 0 0 ~"calc(33.3333% - 3.2rem)";
     // height: 2rem;
 
+    @media (max-width: #pxToEm(750)[]) {
+        flex: 0 0 ~"calc(50% - 1.6rem)";
+    }
+    @media (max-width: #pxToEm(470)[]) {
+        flex: 0 0 100%;
+    }
+
     &__link {
         &:link, &:visited {
             display: block;

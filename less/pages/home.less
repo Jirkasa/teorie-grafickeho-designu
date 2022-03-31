@@ -4,10 +4,13 @@
     align-items: center;
 
     height: ~"calc(100vh - 8rem)";
+    max-height: 90rem;
     
     background-image: linear-gradient(0deg, rgba(@colors[primary], 0.4), rgba(@colors[primary], 0.4)), url("../../assets/img/HomeIntroBackgroundImage.jpg");
     background-position: center;
     background-size: cover;
+
+    padding: 0 1.6rem;
 
     &__content {
         max-width: 94.4rem;
@@ -33,6 +36,11 @@
         color: @colors[text-white];
         text-transform: uppercase;
         text-align: center;
+
+        @media (max-width: #pxToEm(400)[]) {
+            font-size: 4rem;
+            line-height: 4.4rem;
+        }
     }
 
     &__text {
@@ -53,6 +61,10 @@
 
         padding: 3.2rem;
         padding-top: 2.4rem;
+
+        @media (max-width: #pxToEm(470)[]) {
+            padding: 1.6rem;
+        }
     }
 
     &--grey-bg {
@@ -82,6 +94,10 @@
         background-size: cover;
         
         border-radius: .4rem;
+
+        @media (max-width: #pxToEm(750)[]) {
+            display: none;
+        }
     }
 }
 
@@ -95,6 +111,10 @@
 .video-section {
     display: flex;
     gap: 3.2rem;
+
+    @media (max-width: #pxToEm(800)[]) {
+        flex-direction: column;
+    }
 
     > div {
         flex: 2 0;
