@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "compile:less": "lessc ./less/main.less ./assets/css/style.css",
-    "nodemon:compile:less": "nodemon -e less -x \"npm run compile:less\""
+    "nodemon:compile:less": "nodemon -e less -x \"npm run compile:less\"",
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' assets/css/style.css -o assets/css/style.prefix.css",
+    "bundle:color-chapter": "rollup ./assets/js/pages/colors.js --file ./assets/js/pages/colors.packed.js --format iife",
+    "bundle:page-navigation": "rollup ./assets/js/PageNavigation.js --file ./assets/js/pageNavigation.packed.js --format iife"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,11 @@
   },
   "homepage": "https://github.com/Jirkasa/teorie-grafickeho-designu#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
     "less": "^4.1.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "rollup": "^2.70.1"
   }
 }
