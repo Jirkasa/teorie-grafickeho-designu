@@ -30,6 +30,11 @@
 
         padding: .8rem;
 
+        @media print {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
         &--dark-text {
             color: @colors[text-grey-80];
         }

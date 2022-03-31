@@ -7,6 +7,8 @@
 
         background-color: @colors[bg-grey-20];
 
+        @media print { display: none; }
+
         &--left {
             @media (max-width: @chapter-navigation-breakpoint) {
                 flex: 0 0 0;
@@ -39,6 +41,10 @@
             // max-width: 95.4rem;
             max-width: 98.6rem;
             margin: 0 auto;
+
+            .button-primary {
+                @media print { display: none; }
+            }
         }
     }
 }

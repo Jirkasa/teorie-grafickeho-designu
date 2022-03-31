@@ -5,6 +5,11 @@
     background-color: @colors[grey-20];
     border-radius: .4rem;
 
+    @media print {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
     &__photo {
         height: 35.2rem;
         margin-bottom: 1.6rem;
